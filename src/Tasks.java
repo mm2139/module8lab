@@ -5,19 +5,7 @@ public class Tasks {
     public static void Task1(Scanner scan) {
 
         boolean done = false;
-        String username = "";
-
-        System.out.println("Please enter your username.");
-
-        do {
-            if (scan.hasNextLine()) {
-                username = scan.nextLine();
-                done = true;
-            } else {
-                System.out.println("Invalid input - please enter your username.");
-            }
-        } while (!done);
-
+        String username = InputHelper.getNonZeroLenString("Please enter your username.", scan);
         System.out.println("Your username is: " + username);
 
     }

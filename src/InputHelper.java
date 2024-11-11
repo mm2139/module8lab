@@ -12,7 +12,7 @@ public class InputHelper {
                 num = scan.nextInt();
                 done = true;
             } else {
-                System.out.println("Invalid num - " + prompt.toLowerCase());
+                System.out.println("Invalid num." + prompt);
             }
             scan.nextLine();
         } while (!done);
@@ -29,7 +29,7 @@ public class InputHelper {
                 num = scan.nextDouble();
                 done = true;
             } else {
-                System.out.println("Invalid num - " + prompt.toLowerCase());
+                System.out.println("Invalid num." + prompt);
             }
             scan.nextLine();
         } while (!done);
@@ -121,7 +121,7 @@ public class InputHelper {
 
     }
 
-    public static int getNonZeroLenString(String prompt, Scanner scan) {
+    public static String getNonZeroLenString(String prompt, Scanner scan) {
         String input;
         boolean done = false;
 
@@ -130,14 +130,14 @@ public class InputHelper {
         do {
             input = scan.nextLine();
             if (input.length() <= 0) {
-                System.out.println("Invalid input. " + prompt + ".");
+                System.out.println("Invalid input. " + prompt);
             } else {
                 done = true;
 
             }
         } while (!done);
 
-        return input.length();
+        return input;
     }
 
     public static boolean getYNConfirm(String prompt, Scanner scan) {
