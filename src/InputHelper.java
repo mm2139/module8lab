@@ -177,7 +177,7 @@ public class InputHelper {
         for (int j = 0; j<buffer; j++) {
             System.out.print(" ");
         }
-        System.out.print("***");
+        System.out.print("***\n");
         for (int i = 0; i<20; i++) {
             System.out.print("***");
         }
